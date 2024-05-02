@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+ <div class="row justify-content-center">
+   <div class="col-md-6">
+     <div class="card mt-5">
+       <div class="card-header bg-primary text-white">
+         <h3 class="card-title mb-0">Número de usuarios registrados en eventos del mes actual</h3>
+       </div>
+       <div class="card-body text-center">
+         {% if count == 0 %}
+           <p class="lead">No hay registros en el mes actual.</p>
+         {% else %}
+           <p class="display-4">{{ count }}</p>
+         {% endif %}
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+{% endblock %}
